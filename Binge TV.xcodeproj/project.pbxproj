@@ -1,0 +1,587 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BA4B30C125C8C52200774BF6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4B30C025C8C52200774BF6 /* AppDelegate.swift */; };
+		BA4B30C325C8C52200774BF6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4B30C225C8C52200774BF6 /* ViewController.swift */; };
+		BA4B30C525C8C52300774BF6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA4B30C425C8C52300774BF6 /* Assets.xcassets */; };
+		BA4B30C825C8C52300774BF6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA4B30C625C8C52300774BF6 /* Main.storyboard */; };
+		BA4B30D425C8C52300774BF6 /* Binge_TVTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4B30D325C8C52300774BF6 /* Binge_TVTests.swift */; };
+		BA4B30DF25C8C52300774BF6 /* Binge_TVUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4B30DE25C8C52300774BF6 /* Binge_TVUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BA4B30D025C8C52300774BF6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BA4B30B525C8C52200774BF6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BA4B30BC25C8C52200774BF6;
+			remoteInfo = "Binge TV";
+		};
+		BA4B30DB25C8C52300774BF6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BA4B30B525C8C52200774BF6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BA4B30BC25C8C52200774BF6;
+			remoteInfo = "Binge TV";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BA4B30BD25C8C52200774BF6 /* Binge TV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Binge TV.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA4B30C025C8C52200774BF6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BA4B30C225C8C52200774BF6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BA4B30C425C8C52300774BF6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BA4B30C725C8C52300774BF6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BA4B30C925C8C52300774BF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BA4B30CA25C8C52300774BF6 /* Binge_TV.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Binge_TV.entitlements; sourceTree = "<group>"; };
+		BA4B30CF25C8C52300774BF6 /* Binge TVTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Binge TVTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA4B30D325C8C52300774BF6 /* Binge_TVTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Binge_TVTests.swift; sourceTree = "<group>"; };
+		BA4B30D525C8C52300774BF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BA4B30DA25C8C52300774BF6 /* Binge TVUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Binge TVUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA4B30DE25C8C52300774BF6 /* Binge_TVUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Binge_TVUITests.swift; sourceTree = "<group>"; };
+		BA4B30E025C8C52300774BF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BA4B30BA25C8C52200774BF6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA4B30CC25C8C52300774BF6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA4B30D725C8C52300774BF6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BA4B30B425C8C52200774BF6 = {
+			isa = PBXGroup;
+			children = (
+				BA4B30BF25C8C52200774BF6 /* Binge TV */,
+				BA4B30D225C8C52300774BF6 /* Binge TVTests */,
+				BA4B30DD25C8C52300774BF6 /* Binge TVUITests */,
+				BA4B30BE25C8C52200774BF6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BA4B30BE25C8C52200774BF6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BA4B30BD25C8C52200774BF6 /* Binge TV.app */,
+				BA4B30CF25C8C52300774BF6 /* Binge TVTests.xctest */,
+				BA4B30DA25C8C52300774BF6 /* Binge TVUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BA4B30BF25C8C52200774BF6 /* Binge TV */ = {
+			isa = PBXGroup;
+			children = (
+				BA4B30C025C8C52200774BF6 /* AppDelegate.swift */,
+				BA4B30C225C8C52200774BF6 /* ViewController.swift */,
+				BA4B30C425C8C52300774BF6 /* Assets.xcassets */,
+				BA4B30C625C8C52300774BF6 /* Main.storyboard */,
+				BA4B30C925C8C52300774BF6 /* Info.plist */,
+				BA4B30CA25C8C52300774BF6 /* Binge_TV.entitlements */,
+			);
+			path = "Binge TV";
+			sourceTree = "<group>";
+		};
+		BA4B30D225C8C52300774BF6 /* Binge TVTests */ = {
+			isa = PBXGroup;
+			children = (
+				BA4B30D325C8C52300774BF6 /* Binge_TVTests.swift */,
+				BA4B30D525C8C52300774BF6 /* Info.plist */,
+			);
+			path = "Binge TVTests";
+			sourceTree = "<group>";
+		};
+		BA4B30DD25C8C52300774BF6 /* Binge TVUITests */ = {
+			isa = PBXGroup;
+			children = (
+				BA4B30DE25C8C52300774BF6 /* Binge_TVUITests.swift */,
+				BA4B30E025C8C52300774BF6 /* Info.plist */,
+			);
+			path = "Binge TVUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BA4B30BC25C8C52200774BF6 /* Binge TV */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BA4B30E325C8C52300774BF6 /* Build configuration list for PBXNativeTarget "Binge TV" */;
+			buildPhases = (
+				BA4B30B925C8C52200774BF6 /* Sources */,
+				BA4B30BA25C8C52200774BF6 /* Frameworks */,
+				BA4B30BB25C8C52200774BF6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Binge TV";
+			productName = "Binge TV";
+			productReference = BA4B30BD25C8C52200774BF6 /* Binge TV.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BA4B30CE25C8C52300774BF6 /* Binge TVTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BA4B30E625C8C52300774BF6 /* Build configuration list for PBXNativeTarget "Binge TVTests" */;
+			buildPhases = (
+				BA4B30CB25C8C52300774BF6 /* Sources */,
+				BA4B30CC25C8C52300774BF6 /* Frameworks */,
+				BA4B30CD25C8C52300774BF6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BA4B30D125C8C52300774BF6 /* PBXTargetDependency */,
+			);
+			name = "Binge TVTests";
+			productName = "Binge TVTests";
+			productReference = BA4B30CF25C8C52300774BF6 /* Binge TVTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		BA4B30D925C8C52300774BF6 /* Binge TVUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BA4B30E925C8C52300774BF6 /* Build configuration list for PBXNativeTarget "Binge TVUITests" */;
+			buildPhases = (
+				BA4B30D625C8C52300774BF6 /* Sources */,
+				BA4B30D725C8C52300774BF6 /* Frameworks */,
+				BA4B30D825C8C52300774BF6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BA4B30DC25C8C52300774BF6 /* PBXTargetDependency */,
+			);
+			name = "Binge TVUITests";
+			productName = "Binge TVUITests";
+			productReference = BA4B30DA25C8C52300774BF6 /* Binge TVUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BA4B30B525C8C52200774BF6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					BA4B30BC25C8C52200774BF6 = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					BA4B30CE25C8C52300774BF6 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = BA4B30BC25C8C52200774BF6;
+					};
+					BA4B30D925C8C52300774BF6 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = BA4B30BC25C8C52200774BF6;
+					};
+				};
+			};
+			buildConfigurationList = BA4B30B825C8C52200774BF6 /* Build configuration list for PBXProject "Binge TV" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BA4B30B425C8C52200774BF6;
+			productRefGroup = BA4B30BE25C8C52200774BF6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BA4B30BC25C8C52200774BF6 /* Binge TV */,
+				BA4B30CE25C8C52300774BF6 /* Binge TVTests */,
+				BA4B30D925C8C52300774BF6 /* Binge TVUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BA4B30BB25C8C52200774BF6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA4B30C525C8C52300774BF6 /* Assets.xcassets in Resources */,
+				BA4B30C825C8C52300774BF6 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA4B30CD25C8C52300774BF6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA4B30D825C8C52300774BF6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BA4B30B925C8C52200774BF6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA4B30C325C8C52200774BF6 /* ViewController.swift in Sources */,
+				BA4B30C125C8C52200774BF6 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA4B30CB25C8C52300774BF6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA4B30D425C8C52300774BF6 /* Binge_TVTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA4B30D625C8C52300774BF6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA4B30DF25C8C52300774BF6 /* Binge_TVUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BA4B30D125C8C52300774BF6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BA4B30BC25C8C52200774BF6 /* Binge TV */;
+			targetProxy = BA4B30D025C8C52300774BF6 /* PBXContainerItemProxy */;
+		};
+		BA4B30DC25C8C52300774BF6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BA4B30BC25C8C52200774BF6 /* Binge TV */;
+			targetProxy = BA4B30DB25C8C52300774BF6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BA4B30C625C8C52300774BF6 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BA4B30C725C8C52300774BF6 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BA4B30E125C8C52300774BF6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BA4B30E225C8C52300774BF6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		BA4B30E425C8C52300774BF6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Binge TV/Binge_TV.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4KU6579QH8;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = "Binge TV/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.asquaredsoftware.Binge-TV";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		BA4B30E525C8C52300774BF6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Binge TV/Binge_TV.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4KU6579QH8;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = "Binge TV/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.asquaredsoftware.Binge-TV";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		BA4B30E725C8C52300774BF6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4KU6579QH8;
+				INFOPLIST_FILE = "Binge TVTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.asquaredsoftware.Binge-TVTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Binge TV.app/Contents/MacOS/Binge TV";
+			};
+			name = Debug;
+		};
+		BA4B30E825C8C52300774BF6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4KU6579QH8;
+				INFOPLIST_FILE = "Binge TVTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.asquaredsoftware.Binge-TVTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Binge TV.app/Contents/MacOS/Binge TV";
+			};
+			name = Release;
+		};
+		BA4B30EA25C8C52300774BF6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4KU6579QH8;
+				INFOPLIST_FILE = "Binge TVUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.asquaredsoftware.Binge-TVUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "Binge TV";
+			};
+			name = Debug;
+		};
+		BA4B30EB25C8C52300774BF6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4KU6579QH8;
+				INFOPLIST_FILE = "Binge TVUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.asquaredsoftware.Binge-TVUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "Binge TV";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BA4B30B825C8C52200774BF6 /* Build configuration list for PBXProject "Binge TV" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BA4B30E125C8C52300774BF6 /* Debug */,
+				BA4B30E225C8C52300774BF6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BA4B30E325C8C52300774BF6 /* Build configuration list for PBXNativeTarget "Binge TV" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BA4B30E425C8C52300774BF6 /* Debug */,
+				BA4B30E525C8C52300774BF6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BA4B30E625C8C52300774BF6 /* Build configuration list for PBXNativeTarget "Binge TVTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BA4B30E725C8C52300774BF6 /* Debug */,
+				BA4B30E825C8C52300774BF6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BA4B30E925C8C52300774BF6 /* Build configuration list for PBXNativeTarget "Binge TVUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BA4B30EA25C8C52300774BF6 /* Debug */,
+				BA4B30EB25C8C52300774BF6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BA4B30B525C8C52200774BF6 /* Project object */;
+}
