@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,12 @@
 		BA4B30C825C8C52300774BF6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA4B30C625C8C52300774BF6 /* Main.storyboard */; };
 		BA4B30D425C8C52300774BF6 /* Binge_TVTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4B30D325C8C52300774BF6 /* Binge_TVTests.swift */; };
 		BA4B30DF25C8C52300774BF6 /* Binge_TVUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4B30DE25C8C52300774BF6 /* Binge_TVUITests.swift */; };
+		BA4B30F025C8CA4900774BF6 /* EpisodeFileTableCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4B30EF25C8CA4900774BF6 /* EpisodeFileTableCellView.swift */; };
+		BA4B30F625CA019400774BF6 /* FileSearcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4B30F525CA019400774BF6 /* FileSearcher.swift */; };
+		BA4B30FB25CA2E9100774BF6 /* EpisodeFilenameParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4B30FA25CA2E9100774BF6 /* EpisodeFilenameParser.swift */; };
+		BA4B315325CE02D500774BF6 /* LoadedNibView in Frameworks */ = {isa = PBXBuildFile; productRef = BA4B315225CE02D500774BF6 /* LoadedNibView */; };
+		BA4B315825CE030E00774BF6 /* EpisodeFilenameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4B315725CE030E00774BF6 /* EpisodeFilenameView.swift */; };
+		BA4B315D25CE032600774BF6 /* EpisodeFilenameView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA4B315C25CE032600774BF6 /* EpisodeFilenameView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +52,11 @@
 		BA4B30DA25C8C52300774BF6 /* Binge TVUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Binge TVUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA4B30DE25C8C52300774BF6 /* Binge_TVUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Binge_TVUITests.swift; sourceTree = "<group>"; };
 		BA4B30E025C8C52300774BF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BA4B30EF25C8CA4900774BF6 /* EpisodeFileTableCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeFileTableCellView.swift; sourceTree = "<group>"; };
+		BA4B30F525CA019400774BF6 /* FileSearcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileSearcher.swift; sourceTree = "<group>"; };
+		BA4B30FA25CA2E9100774BF6 /* EpisodeFilenameParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeFilenameParser.swift; sourceTree = "<group>"; };
+		BA4B315725CE030E00774BF6 /* EpisodeFilenameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeFilenameView.swift; sourceTree = "<group>"; };
+		BA4B315C25CE032600774BF6 /* EpisodeFilenameView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EpisodeFilenameView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA4B315325CE02D500774BF6 /* LoadedNibView in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,8 +112,13 @@
 				BA4B30C225C8C52200774BF6 /* ViewController.swift */,
 				BA4B30C425C8C52300774BF6 /* Assets.xcassets */,
 				BA4B30C625C8C52300774BF6 /* Main.storyboard */,
+				BA4B30EF25C8CA4900774BF6 /* EpisodeFileTableCellView.swift */,
 				BA4B30C925C8C52300774BF6 /* Info.plist */,
 				BA4B30CA25C8C52300774BF6 /* Binge_TV.entitlements */,
+				BA4B30F525CA019400774BF6 /* FileSearcher.swift */,
+				BA4B30FA25CA2E9100774BF6 /* EpisodeFilenameParser.swift */,
+				BA4B315725CE030E00774BF6 /* EpisodeFilenameView.swift */,
+				BA4B315C25CE032600774BF6 /* EpisodeFilenameView.xib */,
 			);
 			path = "Binge TV";
 			sourceTree = "<group>";
@@ -140,6 +157,9 @@
 			dependencies = (
 			);
 			name = "Binge TV";
+			packageProductDependencies = (
+				BA4B315225CE02D500774BF6 /* LoadedNibView */,
+			);
 			productName = "Binge TV";
 			productReference = BA4B30BD25C8C52200774BF6 /* Binge TV.app */;
 			productType = "com.apple.product-type.application";
@@ -211,6 +231,9 @@
 				Base,
 			);
 			mainGroup = BA4B30B425C8C52200774BF6;
+			packageReferences = (
+				BA4B315125CE02D500774BF6 /* XCRemoteSwiftPackageReference "LoadedNibView" */,
+			);
 			productRefGroup = BA4B30BE25C8C52200774BF6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -227,6 +250,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA4B315D25CE032600774BF6 /* EpisodeFilenameView.xib in Resources */,
 				BA4B30C525C8C52300774BF6 /* Assets.xcassets in Resources */,
 				BA4B30C825C8C52300774BF6 /* Main.storyboard in Resources */,
 			);
@@ -253,7 +277,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA4B30FB25CA2E9100774BF6 /* EpisodeFilenameParser.swift in Sources */,
+				BA4B315825CE030E00774BF6 /* EpisodeFilenameView.swift in Sources */,
 				BA4B30C325C8C52200774BF6 /* ViewController.swift in Sources */,
+				BA4B30F025C8CA4900774BF6 /* EpisodeFileTableCellView.swift in Sources */,
+				BA4B30F625CA019400774BF6 /* FileSearcher.swift in Sources */,
 				BA4B30C125C8C52200774BF6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -582,6 +610,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		BA4B315125CE02D500774BF6 /* XCRemoteSwiftPackageReference "LoadedNibView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/poulh/LoadedNibView.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.0.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		BA4B315225CE02D500774BF6 /* LoadedNibView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BA4B315125CE02D500774BF6 /* XCRemoteSwiftPackageReference "LoadedNibView" */;
+			productName = LoadedNibView;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = BA4B30B525C8C52200774BF6 /* Project object */;
 }

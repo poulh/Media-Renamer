@@ -1,7 +1,8 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="11134" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11134"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="17701"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -673,7 +674,7 @@
                         <outlet property="delegate" destination="Voe-Tx-rLC" id="PrD-fu-P6m"/>
                     </connections>
                 </application>
-                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModuleProvider="target"/>
+                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="Binge_TV" customModuleProvider="target"/>
                 <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -703,15 +704,276 @@
         <!--View Controller-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
-                <viewController id="XfG-lQ-9wD" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="Binge_TV" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                        <rect key="frame" x="0.0" y="0.0" width="738" height="914"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <box title="Search Folder" translatesAutoresizingMaskIntoConstraints="NO" id="two-rv-te5">
+                                <rect key="frame" x="17" y="815" width="704" height="79"/>
+                                <view key="contentView" id="So6-Nk-lef">
+                                    <rect key="frame" x="3" y="3" width="698" height="61"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="72m-M5-OuM">
+                                            <rect key="frame" x="20" y="22" width="572" height="21"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="6yx-1N-rBy">
+                                                <font key="font" usesAppearanceFont="YES"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="CHq-I6-syz">
+                                            <rect key="frame" x="593" y="15" width="92" height="32"/>
+                                            <buttonCell key="cell" type="push" title="Choose..." bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="veR-Fe-tXW">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="chooseSourceDirectoryButtonPressed:" target="XfG-lQ-9wD" id="Ukr-74-QhH"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="CHq-I6-syz" firstAttribute="top" secondItem="So6-Nk-lef" secondAttribute="top" constant="19" id="0f8-tp-qdn"/>
+                                        <constraint firstItem="CHq-I6-syz" firstAttribute="leading" secondItem="72m-M5-OuM" secondAttribute="trailing" constant="8" symbolic="YES" id="7oG-1f-bkw"/>
+                                        <constraint firstAttribute="trailing" secondItem="CHq-I6-syz" secondAttribute="trailing" constant="20" symbolic="YES" id="OFA-tn-zkr"/>
+                                        <constraint firstItem="72m-M5-OuM" firstAttribute="top" secondItem="So6-Nk-lef" secondAttribute="top" constant="18" id="YPn-QU-Lap"/>
+                                        <constraint firstItem="72m-M5-OuM" firstAttribute="leading" secondItem="So6-Nk-lef" secondAttribute="leading" constant="20" symbolic="YES" id="i2R-i7-JR5"/>
+                                    </constraints>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="36H-TF-26P"/>
+                                </constraints>
+                            </box>
+                            <box title="Search Results" translatesAutoresizingMaskIntoConstraints="NO" id="wQN-aq-bIg">
+                                <rect key="frame" x="17" y="232" width="704" height="579"/>
+                                <view key="contentView" id="c9h-Mt-f4N">
+                                    <rect key="frame" x="3" y="3" width="698" height="561"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <scrollView fixedFrame="YES" autohidesScrollers="YES" horizontalLineScroll="64" horizontalPageScroll="10" verticalLineScroll="64" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XNO-wk-MH3">
+                                            <rect key="frame" x="20" y="20" width="658" height="492"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <clipView key="contentView" id="Op9-3K-Ymf">
+                                                <rect key="frame" x="1" y="1" width="656" height="490"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                <subviews>
+                                                    <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="firstColumnOnly" alternatingRowBackgroundColors="YES" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowHeight="64" viewBased="YES" id="oGd-Kg-Vab">
+                                                        <rect key="frame" x="0.0" y="0.0" width="656" height="490"/>
+                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                        <size key="intercellSpacing" width="17" height="0.0"/>
+                                                        <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                        <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
+                                                        <tableColumns>
+                                                            <tableColumn width="644" minWidth="40" maxWidth="1000" id="fqN-ht-dia">
+                                                                <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border">
+                                                                    <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
+                                                                    <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
+                                                                </tableHeaderCell>
+                                                                <textFieldCell key="dataCell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" title="Text Cell" id="8Ea-wk-cj9">
+                                                                    <font key="font" metaFont="system"/>
+                                                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                                    <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                                </textFieldCell>
+                                                                <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
+                                                                <prototypeCellViews>
+                                                                    <tableCellView identifier="EpisodeFilenameViewID" id="p2F-dp-vdz" customClass="EpisodeFilenameView" customModule="Binge_TV" customModuleProvider="target">
+                                                                        <rect key="frame" x="8" y="0.0" width="639" height="99"/>
+                                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                                    </tableCellView>
+                                                                </prototypeCellViews>
+                                                            </tableColumn>
+                                                        </tableColumns>
+                                                    </tableView>
+                                                </subviews>
+                                            </clipView>
+                                            <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="8of-gJ-V0A">
+                                                <rect key="frame" x="1" y="185" width="427" height="16"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                            </scroller>
+                                            <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="PbS-Lo-s0d">
+                                                <rect key="frame" x="224" y="17" width="15" height="102"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                            </scroller>
+                                        </scrollView>
+                                        <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="klH-1O-kqm">
+                                            <rect key="frame" x="18" y="524" width="185" height="18"/>
+                                            <buttonCell key="cell" type="check" title="Include subtitles in results" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="6sm-Wu-oOK">
+                                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="includeSubtitlesInResultsToggled:" target="XfG-lQ-9wD" id="dei-2Z-BJg"/>
+                                            </connections>
+                                        </button>
+                                        <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="6Km-R2-yFh">
+                                            <rect key="frame" x="209" y="524" width="172" height="18"/>
+                                            <buttonCell key="cell" type="check" title="Include videos in results" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="nbJ-VN-eta">
+                                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="includeVideosInResultsToggled:" target="XfG-lQ-9wD" id="DZ7-Ll-zCu"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="klH-1O-kqm" firstAttribute="top" secondItem="c9h-Mt-f4N" secondAttribute="top" constant="20" symbolic="YES" id="4vd-Ey-Ktz"/>
+                                        <constraint firstItem="6Km-R2-yFh" firstAttribute="top" secondItem="c9h-Mt-f4N" secondAttribute="top" constant="20" symbolic="YES" id="6tO-bU-NAW"/>
+                                        <constraint firstItem="6Km-R2-yFh" firstAttribute="leading" secondItem="klH-1O-kqm" secondAttribute="trailing" constant="8" symbolic="YES" id="NMu-qk-ZiE"/>
+                                        <constraint firstItem="klH-1O-kqm" firstAttribute="leading" secondItem="c9h-Mt-f4N" secondAttribute="leading" constant="20" symbolic="YES" id="PkI-iW-vgn"/>
+                                    </constraints>
+                                </view>
+                            </box>
+                            <box title="Rename Target Folder" translatesAutoresizingMaskIntoConstraints="NO" id="9Nx-cs-T3r">
+                                <rect key="frame" x="17" y="134" width="704" height="94"/>
+                                <view key="contentView" id="ecb-Fv-eSm">
+                                    <rect key="frame" x="3" y="3" width="698" height="76"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="pux-ZN-Nrp">
+                                            <rect key="frame" x="593" y="28" width="92" height="32"/>
+                                            <buttonCell key="cell" type="push" title="Choose..." bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="0DJ-ag-7Fg">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="chooseSourceDirectoryButtonPressed:" target="XfG-lQ-9wD" id="Kcf-Je-Q3j"/>
+                                            </connections>
+                                        </button>
+                                        <button verticalHuggingPriority="750" id="pPY-rc-Nct">
+                                            <rect key="frame" x="18" y="10" width="129" height="18"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <buttonCell key="cell" type="check" title="Add series folder" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="6Fc-Bi-Oli">
+                                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="addSeriesDirectoryCheckboxToggled:" target="XfG-lQ-9wD" id="Er1-80-Xeq"/>
+                                            </connections>
+                                        </button>
+                                        <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="S9c-fb-BbZ">
+                                            <rect key="frame" x="153" y="10" width="136" height="18"/>
+                                            <buttonCell key="cell" type="check" title="Add season folder" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="bKL-RR-CHK">
+                                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="addSeasonDirectoryCheckboxToggled:" target="XfG-lQ-9wD" id="9lC-pc-Gmh"/>
+                                            </connections>
+                                        </button>
+                                        <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="KSd-3m-O6a">
+                                            <rect key="frame" x="20" y="35" width="572" height="21"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="NsF-j3-JEb">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="uhf-XF-JZ9">
+                                            <rect key="frame" x="295" y="10" width="203" height="18"/>
+                                            <buttonCell key="cell" type="check" title="Include year in series rename" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="w1D-Fw-j35">
+                                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="includeYearInSeriesRenameCheckboxToggled:" target="XfG-lQ-9wD" id="LAu-x2-m0p"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="S9c-fb-BbZ" firstAttribute="top" secondItem="KSd-3m-O6a" secondAttribute="bottom" constant="8" symbolic="YES" id="1iX-wm-glV"/>
+                                        <constraint firstItem="uhf-XF-JZ9" firstAttribute="leading" secondItem="S9c-fb-BbZ" secondAttribute="trailing" constant="8" symbolic="YES" id="4rd-58-Hyf"/>
+                                        <constraint firstItem="pux-ZN-Nrp" firstAttribute="leading" secondItem="KSd-3m-O6a" secondAttribute="trailing" constant="8" symbolic="YES" id="8ux-79-guy"/>
+                                        <constraint firstItem="pux-ZN-Nrp" firstAttribute="top" secondItem="ecb-Fv-eSm" secondAttribute="top" constant="21" id="LQh-q5-omm"/>
+                                        <constraint firstAttribute="trailing" secondItem="pux-ZN-Nrp" secondAttribute="trailing" constant="20" symbolic="YES" id="MjN-wN-5CX"/>
+                                        <constraint firstItem="uhf-XF-JZ9" firstAttribute="top" secondItem="KSd-3m-O6a" secondAttribute="bottom" constant="8" symbolic="YES" id="USl-R9-inh"/>
+                                        <constraint firstItem="KSd-3m-O6a" firstAttribute="top" secondItem="ecb-Fv-eSm" secondAttribute="top" constant="20" symbolic="YES" id="aMh-HW-kg5"/>
+                                        <constraint firstItem="KSd-3m-O6a" firstAttribute="leading" secondItem="ecb-Fv-eSm" secondAttribute="leading" constant="20" symbolic="YES" id="eat-Wl-nG1"/>
+                                        <constraint firstItem="pPY-rc-Nct" firstAttribute="top" secondItem="KSd-3m-O6a" secondAttribute="bottom" constant="8" symbolic="YES" id="lqW-r3-2l5"/>
+                                        <constraint firstItem="S9c-fb-BbZ" firstAttribute="leading" secondItem="pPY-rc-Nct" secondAttribute="trailing" constant="8" symbolic="YES" id="nZB-uT-vpJ"/>
+                                        <constraint firstItem="KSd-3m-O6a" firstAttribute="top" secondItem="ecb-Fv-eSm" secondAttribute="top" constant="20" symbolic="YES" id="ule-uW-FvI"/>
+                                        <constraint firstItem="KSd-3m-O6a" firstAttribute="leading" secondItem="ecb-Fv-eSm" secondAttribute="leading" constant="20" symbolic="YES" id="yMU-gH-3pL"/>
+                                    </constraints>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="XF3-WI-BhZ"/>
+                                </constraints>
+                            </box>
+                            <box title="Rename Options" translatesAutoresizingMaskIntoConstraints="NO" id="2eq-qw-ZPd">
+                                <rect key="frame" x="17" y="16" width="704" height="114"/>
+                                <view key="contentView" id="74A-WH-cQ4">
+                                    <rect key="frame" x="3" y="3" width="698" height="96"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="N9b-1w-U8N">
+                                            <rect key="frame" x="602" y="49" width="83" height="32"/>
+                                            <buttonCell key="cell" type="push" title="Rename" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="wF4-ms-z5F">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="renameButtonClicked:" target="XfG-lQ-9wD" id="Yc7-Kx-p42"/>
+                                            </connections>
+                                        </button>
+                                        <button verticalHuggingPriority="750" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wsR-qW-GlQ">
+                                            <rect key="frame" x="18" y="57" width="352" height="18"/>
+                                            <buttonCell key="cell" type="check" title="Move file's parent original folder to trash after rename" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="G4C-w5-aAA">
+                                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="moveParentFolderToTrashCheckboxToggled:" target="XfG-lQ-9wD" id="Avm-Nf-hZy"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="N9b-1w-U8N" firstAttribute="top" secondItem="74A-WH-cQ4" secondAttribute="top" constant="20" symbolic="YES" id="F0f-Dk-RnY"/>
+                                        <constraint firstAttribute="trailing" secondItem="N9b-1w-U8N" secondAttribute="trailing" constant="20" symbolic="YES" id="GOV-dQ-NKz"/>
+                                        <constraint firstItem="wsR-qW-GlQ" firstAttribute="leading" secondItem="74A-WH-cQ4" secondAttribute="leading" constant="20" symbolic="YES" id="zH8-xA-d2z"/>
+                                    </constraints>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="110" id="0qR-S5-51c"/>
+                                </constraints>
+                            </box>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="2eq-qw-ZPd" firstAttribute="top" secondItem="9Nx-cs-T3r" secondAttribute="bottom" constant="8" symbolic="YES" id="0ax-6e-SOq"/>
+                            <constraint firstItem="two-rv-te5" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" symbolic="YES" id="D6V-jn-v3W"/>
+                            <constraint firstItem="wQN-aq-bIg" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" symbolic="YES" id="DgG-he-Nsr"/>
+                            <constraint firstAttribute="trailing" secondItem="9Nx-cs-T3r" secondAttribute="trailing" constant="20" symbolic="YES" id="JWd-EI-Jat"/>
+                            <constraint firstAttribute="trailing" secondItem="2eq-qw-ZPd" secondAttribute="trailing" constant="20" symbolic="YES" id="MuP-Mc-ewX"/>
+                            <constraint firstItem="two-rv-te5" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" symbolic="YES" id="ZGE-v4-yh8"/>
+                            <constraint firstItem="wQN-aq-bIg" firstAttribute="top" secondItem="two-rv-te5" secondAttribute="bottom" constant="8" symbolic="YES" id="bDy-Qh-wuw"/>
+                            <constraint firstAttribute="bottom" secondItem="2eq-qw-ZPd" secondAttribute="bottom" constant="20" symbolic="YES" id="e0Q-y5-e9k"/>
+                            <constraint firstItem="9Nx-cs-T3r" firstAttribute="top" secondItem="wQN-aq-bIg" secondAttribute="bottom" constant="8" symbolic="YES" id="msa-ql-ATM"/>
+                            <constraint firstItem="2eq-qw-ZPd" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" symbolic="YES" id="vhY-9r-81H"/>
+                            <constraint firstAttribute="trailing" secondItem="wQN-aq-bIg" secondAttribute="trailing" constant="20" symbolic="YES" id="yQy-PZ-fvT"/>
+                            <constraint firstItem="9Nx-cs-T3r" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" symbolic="YES" id="yob-2k-ayw"/>
+                            <constraint firstAttribute="trailing" secondItem="two-rv-te5" secondAttribute="trailing" constant="20" symbolic="YES" id="yx6-Ej-ANo"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="addSeasonFolderCheckbox" destination="S9c-fb-BbZ" id="vWA-15-Ip5"/>
+                        <outlet property="addSeriesFolderCheckbox" destination="pPY-rc-Nct" id="BSm-9f-1Dd"/>
+                        <outlet property="chooseDestinationDirectoryButton" destination="pux-ZN-Nrp" id="aJr-Rq-V5w"/>
+                        <outlet property="chooseSearchDirectoryButton" destination="CHq-I6-syz" id="BBn-p6-19H"/>
+                        <outlet property="destinationDirectoryLabel" destination="KSd-3m-O6a" id="ayW-Gp-U8Z"/>
+                        <outlet property="includeYearInSeriesCheckbox" destination="uhf-XF-JZ9" id="z4d-Sr-LuW"/>
+                        <outlet property="moveParentFolderToTrashCheckbox" destination="wsR-qW-GlQ" id="KJ7-K0-ajO"/>
+                        <outlet property="renameButton" destination="N9b-1w-U8N" id="CM2-NE-XNV"/>
+                        <outlet property="searchDirectoryLabel" destination="72m-M5-OuM" id="j4w-mx-UhZ"/>
+                        <outlet property="searchForSubtitlesCheckbox" destination="klH-1O-kqm" id="Vc8-Pu-U5b"/>
+                        <outlet property="subtitleResutsCheckbox" destination="klH-1O-kqm" id="iBO-H6-wEw"/>
+                        <outlet property="tableView" destination="oGd-Kg-Vab" id="Tdu-6o-WcQ"/>
+                        <outlet property="videoResultsCheckbox" destination="6Km-R2-yFh" id="bEd-tQ-ta8"/>
+                    </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="655"/>
+            <point key="canvasLocation" x="204" y="977"/>
         </scene>
     </scenes>
 </document>

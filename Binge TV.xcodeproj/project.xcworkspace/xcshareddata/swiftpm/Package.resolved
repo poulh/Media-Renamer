@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "LoadedNibView",
+        "repositoryURL": "https://github.com/poulh/LoadedNibView.git",
+        "state": {
+          "branch": null,
+          "revision": "0582275a38a502f982752cb7a0e2556da1000db4",
+          "version": "0.0.3"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
