@@ -779,7 +779,7 @@
                                                                 <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                                 <prototypeCellViews>
                                                                     <tableCellView identifier="EpisodeFilenameViewID" id="p2F-dp-vdz" customClass="EpisodeFilenameView" customModule="Binge_TV" customModuleProvider="target">
-                                                                        <rect key="frame" x="8" y="0.0" width="639" height="99"/>
+                                                                        <rect key="frame" x="18" y="0.0" width="639" height="99"/>
                                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                     </tableCellView>
                                                                 </prototypeCellViews>
@@ -789,7 +789,7 @@
                                                 </subviews>
                                             </clipView>
                                             <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="8of-gJ-V0A">
-                                                <rect key="frame" x="1" y="185" width="427" height="16"/>
+                                                <rect key="frame" x="1" y="475" width="656" height="16"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                             </scroller>
                                             <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="PbS-Lo-s0d">
@@ -917,7 +917,7 @@
                                                 <action selector="renameButtonClicked:" target="XfG-lQ-9wD" id="Yc7-Kx-p42"/>
                                             </connections>
                                         </button>
-                                        <button verticalHuggingPriority="750" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wsR-qW-GlQ">
+                                        <button hidden="YES" verticalHuggingPriority="750" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wsR-qW-GlQ">
                                             <rect key="frame" x="18" y="57" width="352" height="18"/>
                                             <buttonCell key="cell" type="check" title="Move file's parent original folder to trash after rename" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="G4C-w5-aAA">
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>

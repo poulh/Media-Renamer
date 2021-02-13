@@ -146,7 +146,7 @@ class ViewController: NSViewController {
     }
     
     @IBAction func renameButtonClicked(_ sender: NSButton) {
-        var parentFolders : Set<URL> = []
+       // var parentFolders : Set<URL> = []
         
         for episode in episodes {
             let pathComponents = episode.pathComponents(withSeriesFolder: (addSeriesFolderCheckbox.state == .on),
@@ -154,23 +154,38 @@ class ViewController: NSViewController {
                                                         includeYearInSeason: (includeYearInSeriesCheckbox.state == .on),
                                                         zeroPaddingCount: kZeroPaddingCount)
             if var targetUrl = renameTargetFolder {
+             //  let bundleID = Bundle.main.bundleIdentifier {
+
+              //  targetUrl.appendPathComponent(bundleID)
                 for component in pathComponents {
                     targetUrl.appendPathComponent(component)
                 }
-                print("----")
-                parentFolders.insert(episode.original.deletingLastPathComponent())
-                print(episode.original)
-                print(targetUrl)
+                let targetParentUrl = targetUrl.deletingLastPathComponent()
+
+              //  parentFolders.insert(episode.original.deletingLastPathComponent())
+              //  print(episode.original)
+              //  print(targetUrl)
+                do {
+                    let fileManager = FileManager.default
+                    try fileManager.createDirectory(at: targetParentUrl, withIntermediateDirectories: true, attributes: nil)
+                    try fileManager.moveItem(at: episode.original, to: targetUrl)
+                   // NEED TO ENSURE THIS IS MOVE TO TRASH try fileManager.removeItem(at: movie.parentDir)
+                } catch {
+                    print(error)
+                }
+                
+               
             }
             
-            for parents in parentFolders {
-                print(parents)
-            }
+            
+//            for parents in parentFolders {
+//                print(parents)
+//            }
          
         }
+        self.needsNewSearch = true
+        refreshUI()
     }
-    
-    
 }
 
 extension ViewController : NSTableViewDataSource {
